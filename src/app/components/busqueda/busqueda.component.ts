@@ -31,8 +31,8 @@ export class BusquedaComponent implements OnInit {
           pelicula.id = element.id;
           pelicula.nombre = data.nombre;
           pelicula.cantidadDePublico = data.cantidadDePublico;
-          pelicula.fotoDePelicula = data.fotoDeLaPelicula;
-          pelicula.fechaDeEstreno = new Date(data.fechaDeEstreno.seconds * 1000);
+          pelicula.fotoDePelicula = data.fotoDePelicula;
+          pelicula.fechaDeEstreno = data.fechaDeEstreno;
           pelicula.isActive = data.isActive;
           pelicula.reparto = data.reparto;
           pelicula.tipo = data.tipo;

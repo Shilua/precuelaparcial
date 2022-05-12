@@ -29,7 +29,7 @@ export class ModificarPeliculaComponent implements OnInit {
           actor.id = element.id;
           actor.nombre = data.nombre;
           actor.apellido = data.apellido;
-          actor.fechaDeNacimiento = new Date(data.fechaDeNacimiento.seconds * 1000);
+          actor.fechaDeNacimiento = data.fechaDeNacimiento;
           actor.isActive = data.isActive;
           actor.sexo = data.sexo;
           this.actors.push(actor);

@@ -1,7 +1,7 @@
 export class Actor {
     id:string = '';
     apellido:string ='';
-    fechaDeNacimiento:Date = new Date();
+    fechaDeNacimiento:string = '';
     foto:string = '';
     isActive:boolean = false;
     nacionalidad:string = '';

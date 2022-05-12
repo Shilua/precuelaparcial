@@ -18,6 +18,7 @@ export class DetallePeliculaComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     console.log(this.pelicula);
     this.peliculaService.getMoviePhoto(this.pelicula.fotoDePelicula).then(response => {
+      console.log(response);
       this.img = response;
     });
   }
