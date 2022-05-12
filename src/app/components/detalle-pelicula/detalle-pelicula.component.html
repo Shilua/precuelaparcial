@@ -1,0 +1,34 @@
+<div class="card" style="width: 18rem;" *ngIf="pelicula.nombre != ''; else elseBlock">
+    <img src="{{img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{pelicula.nombre}}</h5>
+      <p class="card-text">
+          Tipo: {{pelicula.tipo}}
+      </p>
+      <p>
+          Fecha de estreno {{pelicula.fechaDeEstreno | date}}
+      </p>
+      <p>
+          Cantidad de publico {{pelicula.cantidadDePublico}}
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              reparto
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let actor of pelicula.reparto">
+            <td>
+              {{actor}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <ng-template #elseBlock>No se ha seleccionado ninguna pelicula.</ng-template>

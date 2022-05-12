@@ -1,0 +1,81 @@
+<div class="row">
+  <app-nav-bar></app-nav-bar>
+</div>
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
+
+<div class="row">  
+    <div class="col-md-7">
+      <div>
+        <h2>Cargar Actor</h2>
+        <div>
+          <label>Nombre:</label
+          ><input class="form-control" [(ngModel)]="pelicula.nombre"/>
+        </div>
+        <div>
+          <label>Cantidad de Publico:</label
+          ><input class="form-control" [(ngModel)]="pelicula.cantidadDePublico" />
+        </div>
+        <div>
+          <label>Fecha De Estreno:</label
+          ><input
+            type="date"
+            class="form-control"
+            [(ngModel)]="pelicula.fechaDeEstreno"
+          />
+        </div>
+        <div>
+          <label>Tipo:</label>
+          <select class="form-select" [(ngModel)]="pelicula.tipo">
+            <option value="NA">--Seleccione--</option>
+            <option ngValue="1" value="Terror">Terror</option>
+            <option ngValue="2" value="Comedia">Comedia</option>
+            <option ngValue="3" value="Romance">Romance</option>
+            <option ngValue="4" value="Otros">Otros</option>
+          </select>
+        </div>
+        <div>
+        <div>
+          <label>Foto:</label
+          ><input
+            type="file"
+            class="form-control"
+            [(ngModel)]="photoUrl"
+            (change)="handleImagen($event)"
+            
+            />
+          </div>
+        
+      </div>
+    </div>
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              reparto
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let actor of pelicula.reparto">
+            <td>
+              {{actor}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <a class="btn btn-success" type="submit" (click)="cargarPelicula()"
+          >Guardar</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <h4>
+      <span class="text-primary">Seleccionar actores</span>
+    </h4>
+    <app-tabla-actor [actorsCollection]="actors" (selectedActor)="handleActor($event)" ></app-tabla-actor>
+  </div>
+</div>
+  

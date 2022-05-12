@@ -1,0 +1,19 @@
+
+<div class="table-responsive-md">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th >Pais</th>
+        <th>Seleccionar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bandera of misPaises | async " (click)="buscarPais(bandera)">
+        <td>{{bandera.name.common}}</td>
+        <td>
+          <img [src]="bandera.flags.png" alt="" style="height: 50px" />
+        </td> 
+      </tr>
+    </tbody>
+  </table>
+</div>
