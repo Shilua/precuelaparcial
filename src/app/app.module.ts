@@ -24,6 +24,7 @@ import { ModificarActorComponent } from './components/modificar-actor/modificar-
 import { ModificarPeliculaComponent } from './components/modificar-pelicula/modificar-pelicula.component';
 import { EliminarActorComponent } from './components/eliminar-actor/eliminar-actor.component';
 import { EliminarPeliculaComponent } from './components/eliminar-pelicula/eliminar-pelicula.component';
+import { ActorPeliculaComponent } from './components/actor-pelicula/actor-pelicula.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { EliminarPeliculaComponent } from './components/eliminar-pelicula/elimin
     ModificarActorComponent,
     ModificarPeliculaComponent,
     EliminarActorComponent,
-    EliminarPeliculaComponent
+    EliminarPeliculaComponent,
+    ActorPeliculaComponent
   ],
   imports: [
     BrowserModule,
